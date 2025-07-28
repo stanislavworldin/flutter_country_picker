@@ -18,7 +18,7 @@ import 'country_localizations_ar.dart';
 /// returned by `CountryLocalizations.of(context)`.
 abstract class CountryLocalizations {
   /// Creates a new CountryLocalizations instance for the specified locale
-  /// 
+  ///
   /// [locale] - The locale string (e.g., 'en', 'es', 'fr')
   CountryLocalizations(String locale);
 
