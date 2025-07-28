@@ -1,6 +1,6 @@
-import 'package:country_search/country_search.dart';
-import 'package:country_search/src/flutter_country_picker/localizations/country_localizations_de.dart';
-import 'package:country_search/src/flutter_country_picker/localizations/country_localizations_pt.dart';
+import 'package:country_picker_enterprise/country_picker_enterprise.dart';
+import 'package:country_picker_enterprise/src/flutter_country_picker/localizations/country_localizations_de.dart';
+import 'package:country_picker_enterprise/src/flutter_country_picker/localizations/country_localizations_pt.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 
