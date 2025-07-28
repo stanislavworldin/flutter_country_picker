@@ -14,6 +14,7 @@ enum Continent {
 
 /// Extension to get localized continent names
 extension ContinentExtension on Continent {
+  /// Returns the localized name of the continent
   String get localizedName {
     switch (this) {
       case Continent.europe:
@@ -48,6 +49,12 @@ class Country {
   /// Continent where the country is located
   final Continent? continent;
 
+  /// Creates a new Country instance
+  /// 
+  /// [code] - ISO country code (e.g., 'US', 'RU', 'GB')
+  /// [flag] - Country flag emoji (e.g., '🇺🇸', '🇷🇺', '🇬🇧')
+  /// [phoneCode] - Phone dialing code (e.g., '+1', '+7', '+44')
+  /// [continent] - Continent where the country is located
   const Country({
     required this.code,
     required this.flag,
@@ -75,6 +82,9 @@ class Country {
 }
 
 /// Utility class for managing country data and operations
+/// 
+/// This class provides static methods for country detection, search, and data management.
+/// It includes caching mechanisms for optimal performance.
 class CountryData {
   /// List of popular countries (most commonly used)
   static const List<String> popularCountryCodes = [
