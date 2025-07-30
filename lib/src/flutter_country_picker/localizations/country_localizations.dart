@@ -25,9 +25,21 @@ abstract class CountryLocalizations {
   // Removed unused localeName field
 
   /// Get the CountryLocalizations instance for the current context
+  /// Falls back to English if CountryLocalizations.delegate is not added to localizationsDelegates
   static CountryLocalizations of(BuildContext context) {
-    return Localizations.of<CountryLocalizations>(
-        context, CountryLocalizations)!;
+    final localizations =
+        Localizations.of<CountryLocalizations>(context, CountryLocalizations);
+
+    if (localizations != null) {
+      debugPrint(
+          'CountryLocalizations: Using localized version for ${Localizations.localeOf(context).languageCode}');
+      return localizations;
+    }
+
+    // Fallback to English if delegate is not added
+    debugPrint(
+        'CountryLocalizations: Delegate not found, falling back to English');
+    return CountryLocalizationsEn();
   }
 
   /// Localizations delegate for CountryLocalizations
@@ -88,6 +100,8 @@ class _CountryLocalizationsDelegate
 
   @override
   Future<CountryLocalizations> load(Locale locale) {
+    debugPrint(
+        'CountryLocalizations: Loading delegate for locale ${locale.languageCode}');
     return SynchronousFuture<CountryLocalizations>(
         lookupCountryLocalizations(locale));
   }
@@ -113,6 +127,9 @@ class _CountryLocalizationsDelegate
 /// Returns the correct localization class based on the provided locale
 /// Falls back to English if the locale is not supported
 CountryLocalizations lookupCountryLocalizations(Locale locale) {
+  debugPrint(
+      'CountryLocalizations: Looking up localization for ${locale.languageCode}');
+
   // Lookup logic when only language code is specified.
   switch (locale.languageCode) {
     case 'en':
@@ -134,5 +151,7 @@ CountryLocalizations lookupCountryLocalizations(Locale locale) {
   }
 
   // Fallback to English for unsupported locales
+  debugPrint(
+      'CountryLocalizations: Unsupported locale ${locale.languageCode}, falling back to English');
   return CountryLocalizationsEn();
 }

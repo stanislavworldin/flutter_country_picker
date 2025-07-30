@@ -193,6 +193,7 @@ Tests cover: widget functionality, auto-detection, all 8 languages, search, and 
 
 ### Localization Setup
 
+#### With Localization Support
 ```dart
 MaterialApp(
   localizationsDelegates: [
@@ -211,6 +212,24 @@ MaterialApp(
   ],
 )
 ```
+
+#### Without Localization Setup (Fallback to English)
+If you don't add `CountryLocalizations.delegate` to your `localizationsDelegates`, the library will automatically fallback to English:
+
+```dart
+MaterialApp(
+  localizationsDelegates: [
+    // CountryLocalizations.delegate, // Not added - will fallback to English
+    // ... other delegates
+  ],
+  supportedLocales: [
+    const Locale('en'),    // English
+    // ... other locales
+  ],
+)
+```
+
+The library will automatically detect if the delegate is missing and use English as the default language.
 
 ### Supported Languages
 

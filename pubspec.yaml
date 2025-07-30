@@ -1,6 +1,6 @@
 name: country_picker_enterprise
 description: Enterprise-grade country picker widget for Flutter with multi-language support, phone codes, smart search functionality, and auto country detection.
-version: 1.0.1
+version: 1.1.0
 homepage: https://github.com/stanislavworldin/flutter_country_picker
 repository: https://github.com/stanislavworldin/flutter_country_picker
 issue_tracker: https://github.com/stanislavworldin/flutter_country_picker/issues
@@ -33,6 +33,8 @@ dev_dependencies:
   flutter_test:
     sdk: flutter
   flutter_lints: ^3.0.0
+  flutter_localizations:
+    sdk: flutter
 
 flutter:
   # Assets for screenshots in README

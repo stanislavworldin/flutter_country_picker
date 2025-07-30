@@ -1,5 +1,30 @@
 # Changelog
 
+## [1.1.0] - 2025-01-28
+
+### Added
+- **Automatic Fallback to English**: Added automatic fallback to English when `CountryLocalizations.delegate` is not added to `localizationsDelegates`
+- **Graceful Error Handling**: Library now gracefully handles missing delegate without crashing
+- **Debug Information**: Added debug print statements to track localization usage
+- **Enhanced Documentation**: Updated README with examples for both with and without delegate setup
+
+### Features
+- Automatic detection of missing `CountryLocalizations.delegate`
+- Seamless fallback to English localization when delegate is not configured
+- Debug logging for localization state tracking
+- Backward compatibility maintained - existing code continues to work
+
+### API Changes
+- Enhanced `CountryLocalizations.of()` method with fallback logic
+- Added debug logging for better development experience
+- No breaking changes - all existing functionality preserved
+
+### Technical Details
+- Fallback logic checks if delegate is present in `localizationsDelegates`
+- Returns `CountryLocalizationsEn()` when delegate is missing
+- Debug messages help developers understand localization state
+- Maintains all existing localization functionality when delegate is properly configured
+
 ## [2.5.0] - 2025-01-28
 
 ### Added
