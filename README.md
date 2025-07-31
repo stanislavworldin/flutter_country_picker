@@ -1,5 +1,19 @@
 # Country Picker Enterprise
 
+⚠️ **DEPRECATED**: This package is no longer maintained. Please use [country_search](https://pub.dev/packages/country_search) instead.
+
+**Why the change?** The new `country_search` package provides:
+- 🚀 **4.7x faster search performance** (~110 microseconds per query)
+- 🌐 **10 languages** (vs 8 in this package)
+- ⚡ **Lightweight components** instead of heavy Material widgets
+- 📱 **Weak device optimization** for smooth performance on low-end devices
+- 🎨 **Better UI/UX** with modern design patterns
+- 🔧 **Active development** and regular updates
+
+**Migration is easy** - the API is very similar. Just replace `country_picker_enterprise` with `country_search` in your `pubspec.yaml` and update your imports.
+
+---
+
 Enterprise-grade country picker widget for Flutter with multi-language support, phone codes, and automatic country detection.
 
 ![Demo](https://raw.githubusercontent.com/stanislavworldin/flutter_country_picker/main/screenshots/video2.gif)

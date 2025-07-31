@@ -1,5 +1,19 @@
 # Changelog
 
+## [1.1.1] - 2025-01-28
+
+### Deprecated
+- **Package Deprecation**: This package is now deprecated and no longer maintained
+- **Migration Notice**: Please use [country_search](https://pub.dev/packages/country_search) instead
+- **Reason for Deprecation**: The new `country_search` package provides better performance, more features, and active development
+- **Migration Guide**: Simply replace `country_picker_enterprise` with `country_search` in your `pubspec.yaml` and update imports
+
+### Technical Details
+- No functional changes in this version
+- Package marked as deprecated in pubspec.yaml
+- README updated with deprecation notice and migration guide
+- All existing functionality remains intact for backward compatibility
+
 ## [1.1.0] - 2025-01-28
 
 ### Added
